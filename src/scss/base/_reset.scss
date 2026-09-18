@@ -1,0 +1,81 @@
+// Modèle de boîte cohérent
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+// Suppression des marges par défaut
+* {
+    margin: 0;
+    padding: 0;
+}
+
+// Base du document
+body {
+    min-height: 100vh;
+}
+
+// Éléments multimédias responsives
+img,
+picture,
+svg,
+video,
+canvas {
+    display: block;
+    max-width: 100%;
+}
+
+// Empêche les images de dépasser leur conteneur
+img,
+picture {
+    height: auto;
+}
+
+// Les formulaires héritent de la typographie
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+// Les zones de texte restent redimensionnables verticalement
+textarea {
+    resize: vertical;
+}
+
+// Évite les débordements causés par de longues chaînes
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+// Listes
+nav ul,
+nav ol {
+    list-style: none;
+}
+
+// Boutons
+button {
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+// Accessibilité
+:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+}
