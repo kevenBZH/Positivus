@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as vars;
+
+.button {
+    font-size: vars.$font-xlarge;
+    color: vars.$color-white;
+    background-color: vars.$color-secondary;
+    padding-block: 20px;
+    padding-inline: 35px;
+    border: 1px solid transparent;
+    border-radius: vars.$radius-medium;
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+
+    &:hover,
+    &:focus-visible {
+        background-color: vars.$color-primary;
+        color: vars.$color-secondary;
+    }
+
+    &--border {
+        color: vars.$color-secondary;
+        background-color: transparent;
+        border-color: vars.$color-secondary;
+
+        &:hover,
+        &:focus-visible {
+            background-color: vars.$color-secondary;
+            color: vars.$color-white;
+        }
+    }
+}

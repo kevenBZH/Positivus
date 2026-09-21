@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as vars;
+
+.header {
+    margin-top: 70px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        flex-shrink: 0;
+        width: 220px;
+
+        img {
+            inline-size: 100%;
+            height: auto;
+        }
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        position: relative;
+        font-size: vars.$font-xlarge;
+        white-space: nowrap;
+        transition: color 0.3s ease;
+
+        &::after {
+            content: "";
+            height: 1px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            inset-block-end: -6px;
+            background-color: vars.$color-secondary;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover,
+        &:focus-visible {
+            &::after {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+        }
+
+        &.button::after {
+            height: 0;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 @use "../abstracts/variables" as vars;
 
-// Polices locales
+// Fonts
 @font-face {
     font-family: "Space Grotesk";
     src: url("../../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf")
@@ -10,16 +10,16 @@
     font-display: swap;
 }
 
-// Typographie globale
+// Typo
 body {
     font-family: vars.$font-primary;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: vars.$color-text;
+    color: vars.$color-secondary;
 }
 
-// Titres
+// Titles
 h1,
 h2,
 h3,
@@ -33,33 +33,33 @@ h6 {
 }
 
 h1 {
-    font-size: clamp(2.75rem, 5vw, 3.75rem);
+    font-size: vars.$font-title-1;
 }
 
 h2 {
-    font-size: clamp(2.25rem, 4vw, 2.5rem);
+    font-size: vars.$font-title-2;
 }
 
 h3 {
-    font-size: clamp(1.625rem, 3vw, 1.875rem);
+    font-size: vars.$font-title-3;
 }
 
 h4 {
-    font-size: 1.125rem;
+    font-size: vars.$font-large;
 }
 
-// Texte courant
+// Text
 p {
     margin: 0;
-    font-size: 1.125rem;
-    line-height: 1.55;
+    font-size: vars.$font-large;
+    line-height: vars.$font-large;
 }
 
 small {
     font-size: 0.875rem;
 }
 
-// Liens
+// Links
 a {
     color: inherit;
     text-decoration: none;

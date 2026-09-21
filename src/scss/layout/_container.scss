@@ -1,0 +1,9 @@
+@use "../abstracts/variables" as vars;
+
+.container {
+    width: min(
+        vars.$container-max-width,
+        calc(100% - (2 * vars.$container-gutter))
+    );
+    margin-inline: auto;
+}
