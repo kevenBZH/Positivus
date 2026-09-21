@@ -7,7 +7,7 @@
     padding: 50px;
     background-color: vars.$color-tertiary;
     border: 1px solid vars.$color-secondary;
-    border-radius: 45px;
+    border-radius: vars.$radius-box;
     box-shadow: 0 5px 0 0 vars.$color-secondary;
 
     &--green {

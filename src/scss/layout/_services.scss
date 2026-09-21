@@ -1,11 +1,16 @@
+@use "../abstracts/variables" as vars;
+
 .services {
     margin-top: 140px;
 
     &__header {
-        width: 65%;
         display: flex;
         align-items: center;
         gap: 40px;
+    }
+
+    &__text {
+        max-width: 580px;
     }
 
     &__content {
@@ -14,5 +19,34 @@
         column-gap: 40px;
         row-gap: 40px;
         margin-top: 80px;
+    }
+}
+
+.proposal {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: vars.$color-tertiary;
+    padding: 55px 60px;
+    border-radius: vars.$radius-box;
+    margin-top: 125px;
+
+    &__content {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    &__link {
+        align-self: flex-start;
+    }
+
+    &__illustration {
+        position: absolute;
+        top: 50%;
+        right: 135px;
+        transform: translateY(-50%);
     }
 }
