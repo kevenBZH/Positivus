@@ -1,0 +1,54 @@
+@use "../abstracts/variables" as vars;
+
+.studies {
+    margin-top: 160px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        column-gap: 40px;
+    }
+
+    &__text {
+        max-width: 550px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        background-color: vars.$color-secondary;
+        padding: 70px 60px;
+        border-radius: vars.$radius-box;
+        margin-top: 80px;
+    }
+
+    &__separator {
+        width: 1px;
+        display: block;
+        background-color: vars.$color-quaternary;
+    }
+}
+
+.study {
+    max-width: 285px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    &__text {
+        color: vars.$color-quaternary;
+    }
+
+    &__link {
+        align-self: start;
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        font-size: vars.$font-xlarge;
+        color: vars.$color-primary;
+
+        svg {
+            fill: vars.$color-primary;
+        }
+    }
+}
