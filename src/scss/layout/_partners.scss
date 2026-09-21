@@ -1,0 +1,13 @@
+.partners {
+    margin-top: 70px;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    &__item {
+        filter: grayscale(1);
+    }
+}
