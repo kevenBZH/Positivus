@@ -1,0 +1,101 @@
+@use "../abstracts/variables" as vars;
+
+.process {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    background-color: vars.$color-tertiary;
+    padding: 40px 60px;
+    border: 1px solid vars.$color-secondary;
+    border-radius: vars.$radius-box;
+    box-shadow: vars.$shadow-box;
+
+    &:hover,
+    &:focus-visible {
+        cursor: pointer;
+
+        .process__icon {
+            background-color: vars.$color-primary;
+        }
+    }
+
+    &--open {
+        background-color: vars.$color-primary;
+
+        &:hover,
+        &:focus-visible {
+            .process__icon {
+                background-color: vars.$color-secondary;
+
+                span {
+                    background-color: vars.$color-quaternary;
+                }
+            }
+        }
+
+        .process {
+            &__icon {
+                span:last-child {
+                    display: none;
+                }
+            }
+
+            &__content {
+                display: block;
+            }
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 30px;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        column-gap: 25px;
+        font-size: vars.$font-title-3;
+
+        span {
+            font-size: vars.$font-title-1;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        background-color: vars.$color-tertiary;
+        border: 1px solid vars.$color-secondary;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+
+        span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: vars.$color-secondary;
+            transform: translate(-50%, -50%);
+            transition: background-color 0.3s ease;
+
+            &:first-child {
+                width: 25px;
+                height: 5px;
+            }
+
+            &:last-child {
+                width: 5px;
+                height: 25px;
+            }
+        }
+    }
+
+    &__content {
+        display: none;
+        padding-block: 30px 15px;
+        border-top: 1px solid vars.$color-secondary;
+    }
+}

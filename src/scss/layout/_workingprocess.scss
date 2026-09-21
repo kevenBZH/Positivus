@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as vars;
+
+.wprocess {
+    margin-top: 140px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        column-gap: 40px;
+    }
+
+    &__text {
+        max-width: 300px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        margin-top: 80px;
+    }
+}
