@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as vars;
+
+.team {
+    display: flex;
+    flex-direction: column;
+    margin-top: 135px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        column-gap: 40px;
+    }
+
+    &__text {
+        max-width: 470px;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        gap: 40px;
+        margin-top: 80px;
+    }
+
+    &__link {
+        align-self: end;
+        width: 270px;
+        margin-top: 40px;
+    }
+}
