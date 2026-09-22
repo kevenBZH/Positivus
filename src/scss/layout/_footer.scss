@@ -1,0 +1,173 @@
+@use "../abstracts/variables" as vars;
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: vars.$color-secondary;
+    padding: 55px 60px 50px;
+    border-radius: vars.$radius-box vars.$radius-box 0 0;
+    margin-top: 140px;
+
+    &__cta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        column-gap: 40px;
+    }
+
+    &__link a {
+        font-size: vars.$font-large;
+        color: vars.$color-quaternary;
+        text-decoration: underline;
+        text-underline-offset: 2.5px;
+        transition: color 0.3s ease;
+
+        &:hover,
+        &:focus-visible {
+            color: vars.$color-primary;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+
+    &__social {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: vars.$color-quaternary;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+
+        &:hover,
+        &:focus-visible {
+            background-color: vars.$color-primary;
+        }
+
+        &--linkedin svg {
+            width: 15px;
+            height: 15px;
+        }
+
+        &--twitter svg {
+            width: 18px;
+            height: 14px;
+        }
+
+        svg {
+            fill: vars.$color-secondary;
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
+        margin-top: 65px;
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        row-gap: 30px;
+    }
+
+    &__infos {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        row-gap: 20px;
+    }
+
+    &__title {
+        font-size: vars.$font-xlarge;
+        background-color: vars.$color-primary;
+        padding-inline: 5px;
+        border-radius: 7px;
+    }
+
+    &__mail,
+    &__phone,
+    &__adress {
+        color: vars.$color-quaternary;
+
+        a {
+            transition: color 0.3s ease;
+
+            &:hover,
+            &:focus-visible {
+                color: vars.$color-primary;
+            }
+        }
+    }
+
+    &__newsletter {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: #292a32;
+        border-radius: 14px;
+    }
+
+    &__form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 20px;
+
+        input[type="email"] {
+            width: 285px;
+            font-size: vars.$font-large;
+            color: vars.$color-quaternary;
+            appearance: none;
+            background-color: transparent;
+            padding: 20px 35px;
+            border: 1px solid vars.$color-quaternary;
+            border-radius: 14px;
+
+            &::placeholder {
+                color: vars.$color-quaternary;
+            }
+        }
+
+        button {
+            width: 251px;
+        }
+    }
+
+    &__end {
+        display: flex;
+        align-items: center;
+        column-gap: 40px;
+        border-top: 1px solid vars.$color-quaternary;
+        padding-top: 50px;
+        margin-top: 50px;
+
+        p,
+        a {
+            color: vars.$color-quaternary;
+        }
+
+        a {
+            font-size: vars.$font-large;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+
+            &:hover,
+            &:focus-visible {
+                color: vars.$color-primary;
+            }
+        }
+    }
+}
