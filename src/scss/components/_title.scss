@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as vars;
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    &__text {
+        color: vars.$color-secondary;
+
+        &--services {
+            max-width: 580px;
+        }
+
+        &--studies {
+            max-width: 550px;
+        }
+
+        &--working {
+            max-width: 300px;
+        }
+
+        &--team {
+            max-width: 470px;
+        }
+
+        &--testimonials {
+            max-width: 475px;
+        }
+
+        &--contact {
+            max-width: 325px;
+        }
+    }
+}
+
+.section-header__title,
+.title {
+    span {
+        color: vars.$color-secondary;
+        background-color: vars.$color-primary;
+        padding-inline: 7px;
+        border-radius: 7px;
+    }
+
+    &--secondary {
+        span {
+            background-color: vars.$color-quaternary;
+        }
+    }
+}

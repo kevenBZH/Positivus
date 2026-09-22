@@ -9,5 +9,11 @@
 
     &__item {
         filter: grayscale(1);
+        transition: filter 0.3s ease;
+
+        &:hover,
+        &:focus-visible {
+            filter: grayscale(0);
+        }
     }
 }

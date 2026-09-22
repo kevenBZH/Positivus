@@ -3,16 +3,6 @@
 .services {
     margin-top: 140px;
 
-    &__header {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-    }
-
-    &__text {
-        max-width: 580px;
-    }
-
     &__content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

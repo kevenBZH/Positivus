@@ -1,17 +1,7 @@
 @use "../abstracts/variables" as vars;
 
 .studies {
-    margin-top: 160px;
-
-    &__header {
-        display: flex;
-        align-items: center;
-        column-gap: 40px;
-    }
-
-    &__text {
-        max-width: 550px;
-    }
+    margin-top: 165px;
 
     &__content {
         display: flex;
@@ -46,9 +36,20 @@
         column-gap: 15px;
         font-size: vars.$font-xlarge;
         color: vars.$color-primary;
+        transition: color 0.3s ease;
+
+        &:hover,
+        &:focus-visible {
+            color: vars.$color-tertiary;
+
+            svg {
+                fill: vars.$color-tertiary;
+            }
+        }
 
         svg {
             fill: vars.$color-primary;
+            transition: fill 0.3s ease;
         }
     }
 }

@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as vars;
 
 .header {
-    margin-top: 70px;
+    margin-top: 65px;
 
     &__container {
         display: flex;
@@ -44,7 +44,6 @@
             left: 0;
             right: 0;
             bottom: -5px;
-            inset-block-end: -6px;
             background-color: vars.$color-secondary;
             transform: scaleX(0);
             transform-origin: right;

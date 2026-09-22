@@ -3,16 +3,6 @@
 .testimonials {
     margin-top: 100px;
 
-    &__header {
-        display: flex;
-        align-items: center;
-        column-gap: 40px;
-    }
-
-    &__text {
-        max-width: 475px;
-    }
-
     &__content {
         display: flex;
         flex-direction: column;
