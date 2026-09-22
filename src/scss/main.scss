@@ -12,9 +12,12 @@
 @use "./layout/casestudy";
 @use "./layout/workingprocess";
 @use "./layout/team";
+@use "./layout/testimonials";
 
 @use "./components/button";
 @use "./components/title";
 @use "./components/service";
 @use "./components/process";
 @use "./components/member";
+@use "./components/testimony";
+@use "./components/pagination";

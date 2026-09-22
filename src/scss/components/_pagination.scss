@@ -1,0 +1,63 @@
+@use "../abstracts/variables" as vars;
+
+.pagination {
+    width: 565px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__navigation {
+        width: 35px;
+        height: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        svg {
+            width: 23px;
+            height: 23px;
+            fill: vars.$color-quaternary;
+            transition: fill 0.3s ease;
+        }
+
+        &:disabled {
+            svg {
+                opacity: 0.3;
+            }
+        }
+
+        &:hover,
+        &:focus-visible {
+            fill: vars.$color-primary;
+        }
+    }
+
+    &__items {
+        display: flex;
+        column-gap: 7.5px;
+    }
+
+    &__item {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            width: 14px;
+            height: 14px;
+            fill: vars.$color-quaternary;
+            transition: fill 0.3s ease;
+        }
+
+        &:hover,
+        &:focus-visible,
+        &[aria-current="true"] {
+            svg {
+                fill: vars.$color-primary;
+            }
+        }
+    }
+}

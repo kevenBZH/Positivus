@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as vars;
+
+.testimony {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+
+    &__container {
+        position: relative;
+        max-width: 600px;
+        padding: 47.5px 50px;
+        border: 1px solid vars.$color-primary;
+        border-radius: vars.$radius-box;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            left: 60px;
+            width: 40px;
+            height: 40px;
+            background-color: vars.$color-secondary;
+            border-right: 1px solid vars.$color-primary;
+            border-bottom: 1px solid vars.$color-primary;
+            transform: rotate(45deg);
+        }
+    }
+
+    &__text {
+        font-size: vars.$font-large;
+        line-height: 1.3em;
+        color: vars.$color-quaternary;
+    }
+
+    &__person {
+        padding-left: 80px;
+    }
+
+    &__name {
+        font-size: vars.$font-xlarge;
+        color: vars.$color-primary;
+    }
+
+    &__position {
+        color: vars.$color-quaternary;
+    }
+}
