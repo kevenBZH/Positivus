@@ -7,19 +7,12 @@
     align-items: center;
 
     &__navigation {
-        width: 35px;
-        height: 3px;
+        width: 23px;
+        height: 23px;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-
-        svg {
-            width: 23px;
-            height: 23px;
-            fill: vars.$color-quaternary;
-            transition: fill 0.3s ease;
-        }
 
         &:disabled {
             svg {
@@ -29,7 +22,18 @@
 
         &:hover,
         &:focus-visible {
-            fill: vars.$color-primary;
+            outline-color: vars.$color-primary;
+
+            svg {
+                fill: vars.$color-primary;
+            }
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+            fill: vars.$color-quaternary;
+            transition: fill 0.3s ease;
         }
     }
 
@@ -58,6 +62,10 @@
             svg {
                 fill: vars.$color-primary;
             }
+        }
+
+        &:focus-visible {
+            outline-color: vars.$color-primary;
         }
     }
 }

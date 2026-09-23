@@ -10,20 +10,18 @@
     border-radius: vars.$radius-box;
     box-shadow: vars.$shadow-box;
 
-    &:hover,
-    &:focus-visible {
-        cursor: pointer;
-
+    &:has(.process__trigger:hover),
+    &:has(.process__trigger:focus-visible) {
         .process__icon {
             background-color: vars.$color-primary;
         }
     }
 
-    &--open {
+    &:has(.process__trigger[aria-expanded="true"]) {
         background-color: vars.$color-primary;
 
-        &:hover,
-        &:focus-visible {
+        &:has(.process__trigger:hover),
+        &:has(.process__trigger:focus-visible) {
             .process__icon {
                 background-color: vars.$color-secondary;
 
@@ -33,20 +31,13 @@
             }
         }
 
-        .process {
-            &__icon {
-                span:last-child {
-                    display: none;
-                }
-            }
-
-            &__content {
-                display: block;
-            }
+        .process__icon span:last-child {
+            display: none;
         }
     }
 
-    &__header {
+    &__trigger {
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -58,13 +49,14 @@
         align-items: center;
         column-gap: 25px;
         font-size: vars.$font-title-3;
+    }
 
-        span {
-            font-size: vars.$font-title-1;
-        }
+    &__number {
+        font-size: vars.$font-title-1;
     }
 
     &__icon {
+        flex-shrink: 0;
         position: relative;
         width: 60px;
         height: 60px;
@@ -94,8 +86,11 @@
     }
 
     &__content {
-        display: none;
         padding-block: 30px 15px;
         border-top: 1px solid vars.$color-secondary;
+
+        &[hidden] {
+            display: none;
+        }
     }
 }

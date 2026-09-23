@@ -15,7 +15,7 @@ body {
     font-family: vars.$font-primary;
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: vars.$line-height-text;
     color: vars.$color-secondary;
 }
 
@@ -29,7 +29,7 @@ h6 {
     margin: 0;
     font-family: vars.$font-primary;
     font-weight: 500;
-    line-height: 1.3;
+    line-height: vars.$line-height-title;
 }
 
 h1 {
@@ -52,6 +52,10 @@ h4 {
 p {
     margin: 0;
     font-size: vars.$font-large;
+    line-height: vars.$line-height-text;
+}
+
+blockquote {
     line-height: vars.$line-height-text;
 }
 

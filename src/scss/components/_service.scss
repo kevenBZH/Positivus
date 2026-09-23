@@ -80,18 +80,6 @@
         font-size: vars.$font-xlarge;
         transition: color 0.3s ease;
 
-        svg {
-            circle {
-                fill: vars.$color-secondary;
-                transition: fill 0.3s ease;
-            }
-
-            path {
-                fill: vars.$color-primary;
-                transition: fill 0.3s ease;
-            }
-        }
-
         &:hover,
         &:focus-visible {
             svg {
@@ -102,6 +90,21 @@
                 path {
                     fill: vars.$color-secondary;
                 }
+            }
+        }
+
+        svg {
+            width: 40px;
+            height: 40px;
+
+            circle {
+                fill: vars.$color-secondary;
+                transition: fill 0.3s ease;
+            }
+
+            path {
+                fill: vars.$color-primary;
+                transition: fill 0.3s ease;
             }
         }
     }

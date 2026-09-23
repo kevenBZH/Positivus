@@ -16,7 +16,12 @@
         width: 555px;
         display: flex;
         flex-direction: column;
-        row-gap: 40px;
+        row-gap: 45px;
+    }
+
+    &__reasons {
+        padding: 0;
+        border: 0;
     }
 
     &__checkboxes {
@@ -67,6 +72,7 @@
         }
 
         input[type="text"],
+        input[type="email"],
         textarea {
             appearance: none;
             height: 60px;
