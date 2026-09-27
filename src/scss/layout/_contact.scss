@@ -1,19 +1,20 @@
 @use "../abstracts/variables" as vars;
 
 .contact {
-    margin-top: 140px;
+    margin-block-start: 140px;
 
     &__content {
         position: relative;
         background-color: vars.$color-tertiary;
-        padding: 60px 0 80px 100px;
+        padding-block: 60px 80px;
+        padding-inline: 100px;
         border-radius: vars.$radius-box;
-        margin-top: 80px;
+        margin-block-start: 80px;
         overflow: hidden;
     }
 
     &__form {
-        width: 555px;
+        width: min(555px, 50vw);
         display: flex;
         flex-direction: column;
         row-gap: 45px;
@@ -92,7 +93,47 @@
     &__illustration {
         position: absolute;
         top: 50%;
-        right: -50%;
-        transform: translate(calc(-50% + 50px), -50%);
+        right: 0;
+        transform: translateY(-50%);
+        width: 365px;
+    }
+
+    @media (max-width: 1200px) {
+        margin-block-start: clamp(50px, 11.5vw, 140px);
+
+        &__form {
+            row-gap: clamp(25px, 4vw, 45px);
+        }
+
+        &__content {
+            padding-block: clamp(40px, 7vw, 60px) clamp(40px, 7vw, 80px);
+            padding-inline: clamp(30px, 7vw, 100px);
+            margin-block-start: clamp(40px, 6.5vw, 80px);
+        }
+
+        &__illustration {
+            width: clamp(250px, 30.5vw, 365px);
+        }
+    }
+
+    @media (max-width: 750px) {
+        &__form {
+            width: 100%;
+        }
+
+        &__illustration {
+            display: none;
+        }
+    }
+
+    @media (max-width: 450px) {
+        &__checkboxes {
+            flex-wrap: wrap;
+            gap: 20px;
+
+            label {
+                column-gap: 10px;
+            }
+        }
     }
 }
