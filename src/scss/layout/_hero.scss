@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
     column-gap: 30px;
-    margin-top: 70px;
+    margin-block-start: clamp(30px, 5vw, 70px);
 
     &__content {
         display: flex;
@@ -16,7 +16,6 @@
     &__intro {
         width: 85%;
         font-size: vars.$font-xlarge;
-        line-height: 1.4em;
     }
 
     &__illustration {
@@ -25,6 +24,42 @@
 
         &--mobile {
             display: none;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        grid-template-columns: repeat(2, 1fr);
+
+        &__content {
+            gap: 25px;
+        }
+
+        &__intro,
+        &__link.button {
+            font-size: vars.$font-large;
+        }
+
+        &__intro {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 780px) {
+        grid-template-columns: 1fr;
+
+        &__illustration {
+            display: none;
+            max-width: min(400px, 100%);
+
+            &--mobile {
+                display: block;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        &__link.button {
+            width: 100%;
         }
     }
 }
