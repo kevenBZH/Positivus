@@ -17,7 +17,7 @@
                     />
                 </a>
 
-                <nav class="menu">
+                <nav id="main-menu" class="menu">
                     <ul class="menu__list">
                         <li class="menu__item">
                             <a href="/" class="menu__link">About us</a>
@@ -46,6 +46,18 @@
                         </li>
                     </ul>
                 </nav>
+
+                <button
+                    type="button"
+                    aria-label="Main menu"
+                    aria-expanded="false"
+                    aria-controls="main-menu"
+                    class="menu__burger"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </header>
 
@@ -164,6 +176,12 @@
 
                                 <span>Learn more</span>
                             </a>
+
+                            <img
+                                src="./src/assets/images/search-illustration.png"
+                                alt=""
+                                class="service__illustration service__illustration--mobile"
+                            />
                         </div>
 
                         <img
@@ -193,9 +211,16 @@
                                     />
                                 </svg>
 
-                                <span>Learn more</span></a
-                            >
+                                <span>Learn more</span>
+                            </a>
+
+                            <img
+                                src="./src/assets/images/ppc-illustration.png"
+                                alt=""
+                                class="service__illustration service__illustration--mobile"
+                            />
                         </div>
+
                         <img
                             src="./src/assets/images/ppc-illustration.png"
                             alt=""
@@ -225,7 +250,14 @@
 
                                 <span>Learn more</span>
                             </a>
+
+                            <img
+                                src="./src/assets/images/social-media-illustration.png"
+                                alt=""
+                                class="service__illustration service__illustration--mobile"
+                            />
                         </div>
+
                         <img
                             src="./src/assets/images/social-media-illustration.png"
                             alt=""
@@ -252,8 +284,15 @@
                                         d="M11.25 24.701C10.5326 25.1152 10.2867 26.0326 10.701 26.75C11.1152 27.4674 12.0326 27.7133 12.75 27.299L11.25 24.701ZM30.7694 16.3882C30.9838 15.588 30.5089 14.7655 29.7087 14.5511L16.6687 11.0571C15.8685 10.8426 15.046 11.3175 14.8316 12.1177C14.6172 12.9179 15.0921 13.7404 15.8923 13.9548L27.4834 17.0607L24.3776 28.6518C24.1631 29.452 24.638 30.2745 25.4382 30.4889C26.2384 30.7033 27.0609 30.2284 27.2753 29.4282L30.7694 16.3882ZM12.75 27.299L30.0705 17.299L28.5705 14.701L11.25 24.701L12.75 27.299Z"
                                     />
                                 </svg>
+
                                 <span>Learn more</span>
                             </a>
+
+                            <img
+                                src="./src/assets/images/marketing-illustration.png"
+                                alt=""
+                                class="service__illustration service__illustration--mobile"
+                            />
                         </div>
 
                         <img
@@ -282,8 +321,15 @@
                                         d="M11.25 24.701C10.5326 25.1152 10.2867 26.0326 10.701 26.75C11.1152 27.4674 12.0326 27.7133 12.75 27.299L11.25 24.701ZM30.7694 16.3882C30.9838 15.588 30.5089 14.7655 29.7087 14.5511L16.6687 11.0571C15.8685 10.8426 15.046 11.3175 14.8316 12.1177C14.6172 12.9179 15.0921 13.7404 15.8923 13.9548L27.4834 17.0607L24.3776 28.6518C24.1631 29.452 24.638 30.2745 25.4382 30.4889C26.2384 30.7033 27.0609 30.2284 27.2753 29.4282L30.7694 16.3882ZM12.75 27.299L30.0705 17.299L28.5705 14.701L11.25 24.701L12.75 27.299Z"
                                     />
                                 </svg>
+
                                 <span>Learn more</span>
                             </a>
+
+                            <img
+                                src="./src/assets/images/content-creation-illustration.png"
+                                alt=""
+                                class="service__illustration service__illustration--mobile"
+                            />
                         </div>
 
                         <img
@@ -312,8 +358,15 @@
                                         d="M11.25 24.701C10.5326 25.1152 10.2867 26.0326 10.701 26.75C11.1152 27.4674 12.0326 27.7133 12.75 27.299L11.25 24.701ZM30.7694 16.3882C30.9838 15.588 30.5089 14.7655 29.7087 14.5511L16.6687 11.0571C15.8685 10.8426 15.046 11.3175 14.8316 12.1177C14.6172 12.9179 15.0921 13.7404 15.8923 13.9548L27.4834 17.0607L24.3776 28.6518C24.1631 29.452 24.638 30.2745 25.4382 30.4889C26.2384 30.7033 27.0609 30.2284 27.2753 29.4282L30.7694 16.3882ZM12.75 27.299L30.0705 17.299L28.5705 14.701L11.25 24.701L12.75 27.299Z"
                                     />
                                 </svg>
+
                                 <span>Learn more</span>
                             </a>
+
+                            <img
+                                src="./src/assets/images/analytics-illustration.png"
+                                alt=""
+                                class="service__illustration service__illustration--mobile"
+                            />
                         </div>
 
                         <img
@@ -335,7 +388,7 @@
                             succeed online.
                         </p>
                         <a href="" class="proposal__link button"
-                            >Get your free proposal</a
+                            >Get your <span>free</span> proposal</a
                         >
                     </div>
 
@@ -986,7 +1039,102 @@
                 </div>
 
                 <div class="testimonials__content">
-                    <div id="testimonials-slider" class="testimonials__list">
+                    <div
+                        id="testimonials-slider"
+                        class="testimonials__list"
+                        role="region"
+                        aria-roledescription="carousel"
+                        aria-label="Client testimonials"
+                        tabindex="0"
+                    >
+                        <article class="testimony">
+                            <div class="testimony__container">
+                                <blockquote class="testimony__text">
+                                    "We have been working with Positivus for the
+                                    past year and have seen a significant
+                                    increase in website traffic and leads as a
+                                    result of their efforts. The team is
+                                    professional, responsive, and truly cares
+                                    about the success of our business. We highly
+                                    recommend Positivus to any company looking
+                                    to grow their online presence."
+                                </blockquote>
+                            </div>
+
+                            <div class="testimony__person">
+                                <h3 class="testimony__name">John Smith</h3>
+                                <p class="testimony__position">
+                                    Marketing Director at XYZ Corp
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="testimony">
+                            <div class="testimony__container">
+                                <blockquote class="testimony__text">
+                                    "We have been working with Positivus for the
+                                    past year and have seen a significant
+                                    increase in website traffic and leads as a
+                                    result of their efforts. The team is
+                                    professional, responsive, and truly cares
+                                    about the success of our business. We highly
+                                    recommend Positivus to any company looking
+                                    to grow their online presence."
+                                </blockquote>
+                            </div>
+
+                            <div class="testimony__person">
+                                <h3 class="testimony__name">John Smith</h3>
+                                <p class="testimony__position">
+                                    Marketing Director at XYZ Corp
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="testimony">
+                            <div class="testimony__container">
+                                <blockquote class="testimony__text">
+                                    "We have been working with Positivus for the
+                                    past year and have seen a significant
+                                    increase in website traffic and leads as a
+                                    result of their efforts. The team is
+                                    professional, responsive, and truly cares
+                                    about the success of our business. We highly
+                                    recommend Positivus to any company looking
+                                    to grow their online presence."
+                                </blockquote>
+                            </div>
+
+                            <div class="testimony__person">
+                                <h3 class="testimony__name">John Smith</h3>
+                                <p class="testimony__position">
+                                    Marketing Director at XYZ Corp
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="testimony">
+                            <div class="testimony__container">
+                                <blockquote class="testimony__text">
+                                    "We have been working with Positivus for the
+                                    past year and have seen a significant
+                                    increase in website traffic and leads as a
+                                    result of their efforts. The team is
+                                    professional, responsive, and truly cares
+                                    about the success of our business. We highly
+                                    recommend Positivus to any company looking
+                                    to grow their online presence."
+                                </blockquote>
+                            </div>
+
+                            <div class="testimony__person">
+                                <h3 class="testimony__name">John Smith</h3>
+                                <p class="testimony__position">
+                                    Marketing Director at XYZ Corp
+                                </p>
+                            </div>
+                        </article>
+
                         <article class="testimony">
                             <div class="testimony__container">
                                 <blockquote class="testimony__text">
@@ -1016,6 +1164,7 @@
                             type="button"
                             aria-label="Previous testimonial"
                             aria-controls="testimonials-slider"
+                            data-slider-control="previous"
                             disabled
                         >
                             <svg
@@ -1128,6 +1277,7 @@
                             type="button"
                             aria-label="Next testimonial"
                             aria-controls="testimonials-slider"
+                            data-slider-control="next"
                         >
                             <svg
                                 viewBox="0 0 23 23"

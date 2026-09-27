@@ -33,15 +33,15 @@ h6 {
 }
 
 h1 {
-    font-size: vars.$font-title-1;
+    font-size: clamp(vars.$font-title-2, 5vw, vars.$font-title-1);
 }
 
 h2 {
-    font-size: vars.$font-title-2;
+    font-size: clamp(vars.$font-title-3, 3.5vw, vars.$font-title-2);
 }
 
 h3 {
-    font-size: vars.$font-title-3;
+    font-size: clamp(vars.$font-title-4, 2.5vw, vars.$font-title-3);
 }
 
 h4 {

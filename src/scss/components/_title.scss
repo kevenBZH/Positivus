@@ -32,6 +32,24 @@
             max-width: 325px;
         }
     }
+
+    &__title {
+        flex-shrink: 0;
+        text-align: center;
+    }
+
+    @media (max-width: 1200px) {
+        column-gap: clamp(15px, 3.5vw, 40px);
+    }
+
+    @media (max-width: 650px) {
+        flex-direction: column;
+        gap: 15px;
+
+        &__text {
+            text-align: center;
+        }
+    }
 }
 
 .section-header__title,

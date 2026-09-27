@@ -5,7 +5,7 @@
     text-align: center;
     color: vars.$color-quaternary;
     background-color: vars.$color-secondary;
-    padding-block: 18px;
+    padding-block: 19px;
     padding-inline: 35px;
     border: 1px solid transparent;
     border-radius: 14px;
@@ -39,5 +39,10 @@
             background-color: vars.$color-secondary;
             color: vars.$color-quaternary;
         }
+    }
+
+    @media (max-width: 1050px) {
+        font-size: vars.$font-large;
+        padding-inline: clamp(20px, 3.5vw, 35px);
     }
 }
