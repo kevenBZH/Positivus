@@ -1,21 +1,43 @@
 @use "../abstracts/variables" as vars;
 
 .studies {
-    margin-top: 165px;
+    margin-block-start: 165px;
 
     &__content {
         display: flex;
         justify-content: space-between;
+        column-gap: 20px;
         background-color: vars.$color-secondary;
         padding: 70px 60px;
         border-radius: vars.$radius-box;
-        margin-top: 80px;
+        margin-block-start: 80px;
     }
 
     &__separator {
         width: 1px;
         display: block;
         background-color: vars.$color-quaternary;
+    }
+
+    @media (max-width: 1200px) {
+        margin-block-start: clamp(50px, 11.5vw, 165px);
+
+        &__content {
+            padding: clamp(30px, 5.8vw, 70px) clamp(30px, 5vw, 60px);
+            margin-block-start: clamp(20px, 6.5vw, 80px);
+        }
+    }
+
+    @media (max-width: 950px) {
+        &__content {
+            flex-direction: column;
+            row-gap: clamp(20px, 3.2vw, 30px);
+        }
+
+        &__separator {
+            width: 100%;
+            height: 1px;
+        }
     }
 }
 
@@ -53,5 +75,15 @@
             fill: vars.$color-primary;
             transition: fill 0.3s ease;
         }
+    }
+
+    @media (max-width: 1050px) {
+        &__link {
+            font-size: vars.$font-large;
+        }
+    }
+
+    @media (max-width: 950px) {
+        max-width: 100%;
     }
 }
