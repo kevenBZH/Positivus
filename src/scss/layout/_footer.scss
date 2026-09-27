@@ -4,14 +4,16 @@
     display: flex;
     flex-direction: column;
     background-color: vars.$color-secondary;
-    padding: 55px 60px 50px;
+    padding-block: 55px 50px;
+    padding-inline: 60px;
     border-radius: vars.$radius-box vars.$radius-box 0 0;
-    margin-top: 140px;
+    margin-block-start: 140px;
 
     &__cta {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        column-gap: 15px;
     }
 
     &__links {
@@ -37,6 +39,10 @@
         display: flex;
         align-items: center;
         column-gap: 20px;
+
+        &--resp {
+            display: none;
+        }
     }
 
     &__social {
@@ -71,8 +77,9 @@
 
     &__content {
         display: grid;
-        grid-template-columns: 1fr 1.3fr;
-        margin-top: 65px;
+        grid-template-columns: minmax(290px, 1fr) minmax(0, 1.3fr);
+        column-gap: 20px;
+        margin-block-start: 65px;
     }
 
     &__contact {
@@ -116,23 +123,22 @@
         display: flex;
         align-items: center;
         background-color: #292a32;
+        padding-inline: 40px;
         border-radius: 14px;
     }
 
     &__form {
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         column-gap: 20px;
 
         input[type="email"] {
-            width: 285px;
             font-size: vars.$font-large;
             color: vars.$color-quaternary;
             appearance: none;
             background-color: transparent;
-            padding: 20px 35px;
+            padding-inline: 35px;
             border: 1px solid vars.$color-quaternary;
             border-radius: 14px;
 
@@ -141,22 +147,25 @@
             }
         }
 
-        button {
-            width: 251px;
+        & .button {
+            padding-inline: 15px;
         }
     }
 
     &__end {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         column-gap: 40px;
+        row-gap: 20px;
         border-top: 1px solid vars.$color-quaternary;
-        padding-top: 50px;
-        margin-top: 50px;
+        padding-block-start: 50px;
+        margin-block-start: 50px;
 
         p,
         a {
             color: vars.$color-quaternary;
+            text-align: center;
         }
 
         a {
@@ -168,6 +177,114 @@
             &:focus-visible {
                 color: vars.$color-primary;
             }
+        }
+    }
+
+    @media (max-width: 1300px) {
+        &__form {
+            column-gap: 15px;
+        }
+
+        &__newsletter {
+            padding-inline: clamp(20px, 2vw, 40px);
+        }
+    }
+
+    @media (max-width: 1200px) {
+        padding-block: clamp(30px, 5vw, 55px) clamp(30px, 4.5vw, 50px);
+        padding-inline: clamp(15px, 5vw, 60px);
+        margin-block-start: clamp(50px, 11.5vw, 140px);
+
+        &__content {
+            margin-block-start: clamp(30px, 5.5vw, 65px);
+        }
+
+        &__end {
+            padding-block-start: clamp(30px, 4.5vw, 50px);
+            margin-block-start: clamp(30px, 4.5vw, 50px);
+        }
+    }
+
+    @media (max-width: 1100px) {
+        &__logo {
+            width: clamp(120px, 16vw, 180px);
+        }
+
+        &__links {
+            column-gap: 20px;
+        }
+
+        &__socials {
+            column-gap: 15px;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        &__form {
+            grid-template-columns: minmax(0, 1fr);
+            grid-template-rows: 1fr 1fr;
+            row-gap: 20px;
+        }
+
+        &__links {
+            column-gap: 15px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        &__links {
+            column-gap: 12.5px;
+        }
+
+        &__socials {
+            column-gap: 10px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        &__cta {
+            flex-direction: column;
+            row-gap: 30px;
+        }
+
+        &__logo {
+            width: 210px;
+        }
+
+        &__socials {
+            column-gap: 20px;
+        }
+
+        &__content {
+            grid-template-columns: minmax(0, 1fr);
+            grid-template-rows: repeat(2, minmax(0, 1fr));
+            row-gap: 30px;
+        }
+
+        &__contact {
+            align-items: center;
+            row-gap: 20px;
+        }
+
+        &__infos {
+            align-items: center;
+        }
+
+        &__mail,
+        &__phone,
+        &__adress {
+            text-align: center;
+        }
+
+        &__end {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 560px) {
+        &__links {
+            flex-direction: column;
+            row-gap: 20px;
         }
     }
 }
