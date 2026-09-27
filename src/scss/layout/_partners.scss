@@ -1,5 +1,5 @@
 .partners {
-    margin-top: 70px;
+    margin-block-start: 70px;
 
     &__list {
         display: flex;
@@ -14,6 +14,23 @@
         &:hover,
         &:focus-visible {
             filter: grayscale(0);
+        }
+    }
+
+    @media (max-width: 1000px) {
+        margin-block-start: clamp(50px, 8.5vw, 70px);
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            gap: 20px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }
