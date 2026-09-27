@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as vars;
 
 .testimonials {
-    margin-top: 100px;
+    margin-block-start: 100px;
 
     &__content {
         display: flex;
@@ -9,13 +9,49 @@
         align-items: center;
         row-gap: 115px;
         background-color: vars.$color-secondary;
-        padding: 85px 20px 60px;
+        padding: 85px 0 60px;
         border-radius: vars.$radius-box;
-        margin-top: 80px;
+        margin-block-start: 80px;
     }
 
     &__list {
+        position: relative;
+        width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+        gap: 50px;
+        padding-inline: max(20px, calc((100% - 600px) / 2));
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: inline mandatory;
+        scrollbar-width: none;
+        cursor: grab;
+
+        &.is-dragging {
+            cursor: grabbing;
+            user-select: none;
+            scroll-snap-type: none;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        margin-block-start: clamp(50px, 11.5vw, 100px);
+
+        &__content {
+            row-gap: clamp(30px, 9.5vw, 115px);
+            padding-block-start: clamp(30px, 7vw, 85px);
+            padding-block-end: clamp(30px, 5vw, 60px);
+            margin-block-start: clamp(30px, 6.5vw, 80px);
+        }
+    }
+
+    @media (max-width: 700px) {
+        &__list {
+            gap: 30px;
+        }
     }
 }

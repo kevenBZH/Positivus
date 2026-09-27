@@ -1,7 +1,7 @@
 @use "../abstracts/variables" as vars;
 
 .pagination {
-    width: 565px;
+    width: min(565px, calc(100% - 40px));
     display: flex;
     justify-content: space-between;
     align-items: center;

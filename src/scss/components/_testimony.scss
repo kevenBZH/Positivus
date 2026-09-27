@@ -1,13 +1,15 @@
 @use "../abstracts/variables" as vars;
 
 .testimony {
+    width: auto;
+    flex: 0 0 min(600px, 100%);
     display: flex;
     flex-direction: column;
     row-gap: 50px;
+    scroll-snap-align: center;
 
     &__container {
         position: relative;
-        max-width: 600px;
         padding: 47.5px 50px;
         border: 1px solid vars.$color-primary;
         border-radius: vars.$radius-box;
@@ -32,7 +34,7 @@
     }
 
     &__person {
-        padding-left: 80px;
+        padding-inline-start: 80px;
     }
 
     &__name {
@@ -42,5 +44,19 @@
 
     &__position {
         color: vars.$color-quaternary;
+    }
+
+    @media (max-width: 1200px) {
+        &__container {
+            padding: clamp(30px, 4vw, 47.5px) clamp(30px, 4.25vw, 50px);
+
+            &::after {
+                left: clamp(50px, 5vw, 60px);
+            }
+        }
+
+        &__person {
+            padding-inline-start: clamp(30px, 6.5vw, 80px);
+        }
     }
 }
