@@ -3,18 +3,45 @@
 .team {
     display: flex;
     flex-direction: column;
-    margin-top: 135px;
+    margin-block-start: 135px;
 
     &__content {
         display: grid;
         grid-template-columns: repeat(3, minmax(300px, 1fr));
         gap: 40px;
-        margin-top: 80px;
+        margin-block-start: 80px;
     }
 
     &__link {
         align-self: end;
         width: 270px;
-        margin-top: 40px;
+        margin-block-start: 40px;
+    }
+
+    @media (max-width: 1200px) {
+        margin-block-start: clamp(50px, 11.5vw, 135px);
+
+        &__content {
+            gap: clamp(20px, 3.25vw, 40px);
+            margin-block-start: clamp(30px, 6.5vw, 80px);
+        }
+    }
+
+    @media (max-width: 1000px) {
+        &__content {
+            grid-template-columns: repeat(2, minmax(300px, 1fr));
+        }
+    }
+
+    @media (max-width: 700px) {
+        &__content {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 600px) {
+        &__link {
+            width: 100%;
+        }
     }
 }

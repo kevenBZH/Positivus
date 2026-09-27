@@ -13,7 +13,13 @@
     &__header {
         position: relative;
         display: flex;
+        align-items: center;
         column-gap: 20px;
+    }
+
+    &__picture {
+        flex-shrink: 0;
+        width: 105px;
     }
 
     &__info {
@@ -33,7 +39,7 @@
 
     &__social {
         position: absolute;
-        top: 0;
+        top: -20px;
         right: 0;
         width: 35px;
         height: 35px;
@@ -69,11 +75,24 @@
     }
 
     &__content {
-        padding-top: 30px;
+        padding-block-start: 30px;
         border-top: 1px solid vars.$color-secondary;
     }
 
     &__experience {
         line-height: 1.25;
+    }
+
+    @media (max-width: 1200px) {
+        row-gap: clamp(15px, 2.5vw, 25px);
+        padding: clamp(30px, 3.5vw, 40px) clamp(25px, 2.75vw, 32.5px);
+
+        &__picture {
+            width: clamp(80px, 8.5vw, 105px);
+        }
+
+        &__content {
+            padding-block-start: clamp(15px, 2.5vw, 30px);
+        }
     }
 }
