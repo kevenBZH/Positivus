@@ -1,9 +1,8 @@
 @use "../abstracts/variables" as vars;
 
 .service {
-    height: 310px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 210px;
     padding: 50px;
     background-color: vars.$color-tertiary;
     border: 1px solid vars.$color-secondary;
@@ -111,7 +110,61 @@
 
     &__illustration {
         flex: 0;
-        width: 210px;
+        align-self: center;
         object-fit: contain;
+        &--mobile {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr clamp(160px, 17vw, 210px);
+        padding: clamp(30px, 4vw, 50px);
+
+        &__link {
+            font-size: vars.$font-large;
+            column-gap: 10px;
+
+            svg {
+                width: clamp(30px, 3.3vw, 40px);
+            }
+        }
+    }
+
+    @media (max-width: 940px) {
+        grid-template-columns: 1fr;
+
+        &__content {
+            display: grid;
+            grid-template-areas:
+                "title title"
+                "link illustration";
+            row-gap: 10px;
+            column-gap: 20px;
+        }
+
+        &__title {
+            grid-area: title;
+        }
+
+        &__link {
+            grid-area: link;
+            align-self: end;
+
+            span {
+                display: none;
+            }
+        }
+
+        &__illustration {
+            display: none;
+            grid-area: illustration;
+            justify-self: end;
+            width: min(140px, 100%);
+
+            &--mobile {
+                display: block;
+            }
+        }
     }
 }
